@@ -1,0 +1,107 @@
+<template>
+  <section id="cardType" class="card__wrap" :class="attr">
+    <h2><em>HOT DEAL</em> 특가</h2>
+    <p>놀라운 가격의 선착순 초특가 딜 놓치지 마세요!</p>
+    <div class="card__inner" :class="layout">
+      <article class="card">
+        <figure class="card__header">
+          <img src="../../assets/img/15.jpg" alt="웹표준 사이트 만들기" />
+        </figure>
+        <div class="card__body">
+          <h3 class="tit">동유럽 8박9일 특가</h3>
+          <p class="desc">1,299,000~</p>
+        </div>
+      </article>
+      <article class="card">
+        <figure class="card__header">
+          <img src="../../assets/img/12.jpg" alt="웹표준 사이트 만들기" />
+        </figure>
+        <div class="card__body">
+          <h3 class="tit">스위스 5박7일 특가</h3>
+          <p class="desc">899,000~</p>
+        </div>
+      </article>
+      <article class="card">
+        <figure class="card__header">
+          <img src="../../assets/img/22.jpg" alt="웹표준 사이트 만들기" />
+        </figure>
+        <div class="card__body">
+          <h3 class="tit">뉴욕 남부 8박9일 특가</h3>
+          <p class="desc">499,000~</p>
+        </div>
+      </article>
+    </div>
+  </section>
+</template>
+<script>
+export default {
+  props: { attr: String, layout: String },
+};
+</script>
+<style>
+/* cartType */
+.card__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.card {
+  width: 32%;
+  background: #f5f5f5;
+  position: relative;
+}
+
+.card__wrap em {
+  color: #5e2bb9;
+}
+.card__body {
+  padding: 24px;
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+.card__body .tit {
+  font-size: 24px;
+  margin: 10px 0;
+}
+.card__body .desc {
+  font-size: 18px;
+  line-height: 1.4;
+  color: white;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+@media (max-width: 960px) {
+  .card__inner {
+    flex-wrap: wrap;
+  }
+  .card {
+    width: 49%;
+  }
+  .card:last-child {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .card {
+    width: 100%;
+  }
+  .card:first-child {
+    margin-bottom: 20px;
+  }
+  .card__body {
+    padding: 20px;
+  }
+  .card__body .desc {
+    font-size: 16px;
+  }
+}
+</style>

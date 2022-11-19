@@ -1,26 +1,37 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <HeaderLayout fonts="GmarketSans" />
+    <SliderSection fonts="GmarketSans" />
+    <TextSection attr="section GmarketSans" layout="container" />
+    <CardSection attr="section GmarketSans" layout="container" />
+    <ImageSection attr="section GmarketSans" layout="container" />
+    <BannerSection fonts="GmarketSans" />
+    <ImgTextSection attr="section GmarketSans" layout="container" />
+    <FooterLayout attr="section nexon gray" layout="container" />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderLayout from "./components/layout/HeaderLayout.vue";
+import FooterLayout from "./components/layout/FooterLayout.vue";
+import ImageSection from "./components/section/ImageSection.vue";
+import ImgTextSection from "./components/section/ImgTextSection.vue";
+import SliderSection from "./components/section/SliderSection.vue";
+import TextSection from "./components/section/TextSection.vue";
+import BannerSection from "./components/section/BannerSection.vue";
+import CardSection from "./components/section/CardSection.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    HeaderLayout,
+    SliderSection,
+    TextSection,
+    CardSection,
+    ImageSection,
+    BannerSection,
+    ImgTextSection,
+    FooterLayout,
+  },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
